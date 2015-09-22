@@ -23,10 +23,11 @@ public class TicTacToe {
         //System.out.print("Name player 2: ");
         //player2 = keybord.next();
 
-        System.out.println("\n\n" + player1 + " VS " + player2 + "\nLET THE GAME BEGIN!");
+        /*System.out.println("\n\n" + player1 + " VS " + player2 + "\nLET THE GAME BEGIN!");
         System.out.print("+----------+----------+----------+\n" + Grafic.row1);
         System.out.print("+----------+----------+----------+\n" + Grafic.row2);
         System.out.print("+----------+----------+----------+\n" + Grafic.row3 + "+----------+----------+----------+\n");
+        */
 
 
        // while (win == false) {

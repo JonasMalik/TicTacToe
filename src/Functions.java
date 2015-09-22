@@ -10,15 +10,18 @@ public class Functions {
                              {5,5,5},
                              {5,5,5}};
     static int  turn;
+    static String player1;
+    static String player2;
 
 
     static void MainMenu(){
 
-         int menuChoise;
+         byte menuChoise;
 
 
          System.out.print(Grafic.mainMenu);
-         menuChoise = keybord.nextInt();
+         System.out.print("\nPlease type the number of game alternative you want to play: ");
+         menuChoise = keybord.nextByte();
 
          switch (menuChoise){
              case 1: PlayerVsComputer();
@@ -35,12 +38,19 @@ public class Functions {
     }
 
     static void PlayerVsComputer(){
-        System.out.println("pvc");
+
+        boolean isPlayAgain = true;
+
+        System.out.print("Name player 1: ");
+        player1 = keybord.next();
+        player2 = "Computer";
+
+        ClearScreen();
+        System.out.println("Let the game begin!\n"+player1+"  VS  "+player2);
     }
 
     static void PlayerVsPlayer(){
-        String player1;
-        String player2;
+
         boolean isPlayAgain = true;
 
         System.out.print("Name player 1: ");
@@ -48,21 +58,27 @@ public class Functions {
         System.out.print("Name player 2: ");
         player2 = keybord.next();
 
-        while (isPlayAgain == true){
-            ClearScreen();
-            System.out.println("hej");
-            isPlayAgain = false;
-
-        }
+        ClearScreen();
+        System.out.println("Let the game begin!\n" + player1 + "  VS  " + player2);
 
     }
 
     static void Points(){
+
         System.out.println("points");
     }
 
     static void Exit(){
-        System.out.println("Exit");
+
+        int i = 0;
+
+        ClearScreen();
+        System.out.println("Thanks for playing!\nCreated by Jonas Malik");
+
+        while (i != 5){
+            System.out.println("\n");
+            i++;
+        }
     }
 
     static void WhoseTurn(){
